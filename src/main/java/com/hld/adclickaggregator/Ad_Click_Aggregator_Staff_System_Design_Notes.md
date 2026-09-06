@@ -282,6 +282,8 @@ User → Client → LB → Click Processor
 Advertiser → Client → Dashboard Service → OLAP
 ```
 
+![ClickAdAggregator](AdClickAggregator.svg)
+
 ### Core responsibilities
 
 ``` text
