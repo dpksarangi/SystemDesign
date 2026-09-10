@@ -1,0 +1,142 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
+  <diagram name="Page-1" id="gzoLotlO2EikbQoJdVLE">
+    <mxGraphModel dx="1234" dy="808" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Functional Requirements:&lt;div&gt;&lt;ul&gt;&lt;li&gt;Create a short url from a long url&lt;/li&gt;&lt;li&gt;optinally support the custom alias&lt;/li&gt;&lt;li&gt;optionaly support an expiration time&lt;/li&gt;&lt;li&gt;Be redirected to original url from the short url&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;Non Functional Requirements:&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Low latency on redirects(~200ms)&lt;/li&gt;&lt;li&gt;Scale to 100DAu and 1B urls&lt;/li&gt;&lt;li&gt;Ensure uniqueness of the short code&lt;/li&gt;&lt;li&gt;High Availability eventual consistency&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="230" width="320" x="50" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Core Entities&lt;div&gt;&lt;ul&gt;&lt;li&gt;User&lt;/li&gt;&lt;li&gt;Original url&lt;/li&gt;&lt;li&gt;Short url&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="130" x="50" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;API / Services&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Shorten Url&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;post /urls -&amp;gt; shorturl&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;OriginalurlS,&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;alias,&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;expirationtime&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); text-align: center;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;}&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;/blockquote&gt;" vertex="1">
+          <mxGeometry height="150" width="180" x="50" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;API / Services&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Redirect Url&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;get /shorturl&lt;/div&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;/blockquote&gt;" vertex="1">
+          <mxGeometry height="60" width="180" x="50" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-5" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Actor" vertex="1">
+          <mxGeometry height="60" width="30" x="340" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Primary server" vertex="1">
+          <mxGeometry height="60" width="120" x="609" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-7" edge="1" parent="1" source="IdE0zEKYAKmfSanEo9sJ-5" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="455" y="480" as="sourcePoint" />
+            <mxPoint x="475" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-8" connectable="0" parent="IdE0zEKYAKmfSanEo9sJ-7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="getShortUrl&lt;br&gt;redirect" vertex="1">
+          <mxGeometry relative="1" x="0.0095" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-9" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="DynamoDB" vertex="1">
+          <mxGeometry height="92" width="71" x="849" y="338" as="geometry" />
+        </mxCell>
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-11" edge="1" parent="1" source="IdE0zEKYAKmfSanEo9sJ-6" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=52.5;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="IdE0zEKYAKmfSanEo9sJ-9" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="679" y="490" as="sourcePoint" />
+            <mxPoint x="729" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-13" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="redis" vertex="1">
+          <mxGeometry height="80" width="80" x="739" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-14" edge="1" parent="1" source="IdE0zEKYAKmfSanEo9sJ-6" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=-0.012;entryY=0.6;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="IdE0zEKYAKmfSanEo9sJ-13" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="679" y="490" as="sourcePoint" />
+            <mxPoint x="729" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-16" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Read through&lt;br&gt;LRU cache" vertex="1">
+          <mxGeometry height="30" width="110" x="725" y="196" as="geometry" />
+        </mxCell>
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-18" parent="1" style="shape=table;startSize=20;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;fontSize=8;" value="Table" vertex="1">
+          <mxGeometry height="110" width="101" x="940" y="256" as="geometry" />
+        </mxCell>
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-19" parent="IdE0zEKYAKmfSanEo9sJ-18" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;fontSize=8;" value="" vertex="1">
+          <mxGeometry height="20" width="101" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-20" parent="IdE0zEKYAKmfSanEo9sJ-19" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;overflow=hidden;whiteSpace=wrap;html=1;fontSize=8;" value="PK" vertex="1">
+          <mxGeometry height="20" width="21" as="geometry">
+            <mxRectangle height="20" width="21" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-21" parent="IdE0zEKYAKmfSanEo9sJ-19" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;overflow=hidden;whiteSpace=wrap;html=1;fontSize=8;" value="ShortUrl(indexed)" vertex="1">
+          <mxGeometry height="20" width="80" x="21" as="geometry">
+            <mxRectangle height="20" width="80" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-22" parent="IdE0zEKYAKmfSanEo9sJ-18" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;fontSize=8;" value="" vertex="1">
+          <mxGeometry height="20" width="101" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-23" parent="IdE0zEKYAKmfSanEo9sJ-22" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;whiteSpace=wrap;html=1;fontSize=8;" value="" vertex="1">
+          <mxGeometry height="20" width="21" as="geometry">
+            <mxRectangle height="20" width="21" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-24" parent="IdE0zEKYAKmfSanEo9sJ-22" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;fontSize=8;" value="Expiration" vertex="1">
+          <mxGeometry height="20" width="80" x="21" as="geometry">
+            <mxRectangle height="20" width="80" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-25" parent="IdE0zEKYAKmfSanEo9sJ-18" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;fontSize=8;" value="" vertex="1">
+          <mxGeometry height="20" width="101" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-26" parent="IdE0zEKYAKmfSanEo9sJ-25" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;whiteSpace=wrap;html=1;fontSize=8;" value="" vertex="1">
+          <mxGeometry height="20" width="21" as="geometry">
+            <mxRectangle height="20" width="21" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-27" parent="IdE0zEKYAKmfSanEo9sJ-25" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;fontSize=8;" value="Original Url" vertex="1">
+          <mxGeometry height="20" width="80" x="21" as="geometry">
+            <mxRectangle height="20" width="80" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-28" parent="IdE0zEKYAKmfSanEo9sJ-18" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;fontSize=8;" value="" vertex="1">
+          <mxGeometry height="30" width="101" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-29" parent="IdE0zEKYAKmfSanEo9sJ-28" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;whiteSpace=wrap;html=1;fontSize=8;" value="" vertex="1">
+          <mxGeometry height="30" width="21" as="geometry">
+            <mxRectangle height="30" width="21" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-30" parent="IdE0zEKYAKmfSanEo9sJ-28" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;fontSize=8;" value="Creation DT&lt;div&gt;UserID&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="80" x="21" as="geometry">
+            <mxRectangle height="30" width="80" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-32" edge="1" parent="1" source="IdE0zEKYAKmfSanEo9sJ-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="IdE0zEKYAKmfSanEo9sJ-5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-31" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="LB" vertex="1">
+          <mxGeometry height="60" width="40" x="480" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-33" edge="1" parent="1" source="IdE0zEKYAKmfSanEo9sJ-31" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="IdE0zEKYAKmfSanEo9sJ-6" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="710" y="490" as="sourcePoint" />
+            <mxPoint x="760" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-34" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Primary server" vertex="1">
+          <mxGeometry height="60" width="120" x="614" y="366" as="geometry" />
+        </mxCell>
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-35" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="URL Service" vertex="1">
+          <mxGeometry height="60" width="120" x="619" y="371" as="geometry" />
+        </mxCell>
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-37" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="We have no relations and query pattern is streight forward get(key). With this scale and this query pattern Nosql db makes a better choice" vertex="1">
+          <mxGeometry height="120" width="210" x="850" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-38" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="I am considering a 301 vs 302 redirects.&lt;br&gt;If we have requirements around collecting data for clicks and behaviour analytics collection I would go with the 302 else we can also explore 301 redirects.&amp;nbsp;&lt;br&gt;One more thing is 301 is more useful when we have same routing for most of the URl here all new URI is mapped to new Actual URL so 301 might not make that better." vertex="1">
+          <mxGeometry height="120" width="300" x="341" y="203" as="geometry" />
+        </mxCell>
+        <mxCell id="IdE0zEKYAKmfSanEo9sJ-39" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;Unique Id generation&lt;div&gt;&lt;ul style=&quot;line-height: 90%;&quot;&gt;&lt;li&gt;I am thinking of a 8 char Base62 encoded charset&lt;br&gt;&lt;/li&gt;&lt;li&gt;Uniqueness constraint in DB to handle collisions&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="125" width="370" x="466" y="488" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
