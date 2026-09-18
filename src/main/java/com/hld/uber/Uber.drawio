@@ -1,0 +1,186 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
+  <diagram name="Page-1" id="pPJrJhzo__Y3sYvq_z1x">
+    <mxGraphModel dx="1753" dy="1021" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Functional requirements:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;ul&gt;&lt;li&gt;User is able to book rides&lt;/li&gt;&lt;li&gt;User is able to get estimates from start location and destination&lt;/li&gt;&lt;li&gt;Divers are able to accept rides&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;NFR:&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;10 Million rides per day&lt;/li&gt;&lt;li&gt;low latency matching &amp;lt; 1 min or failure&lt;/li&gt;&lt;li&gt;Consistency of matching Ride to driver is 1:1&lt;/li&gt;&lt;li&gt;Highly available outside the matching&lt;/li&gt;&lt;li&gt;handle high throuhput, surges for peak hours or special requests&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="320" width="380" x="13" y="171" as="geometry" />
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Core Entities&lt;div&gt;&lt;ul&gt;&lt;li&gt;User&lt;/li&gt;&lt;li&gt;Driver&lt;/li&gt;&lt;li&gt;Ride&lt;/li&gt;&lt;li&gt;Location&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="140" x="20" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Apis:&lt;div&gt;&lt;ul&gt;&lt;li&gt;Post ride/fareestimate(start,destination location)&amp;nbsp;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;-&amp;gt; ride details&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;Patch ride/request -&amp;gt; rideid&lt;/li&gt;&lt;li&gt;Post location/update(driver location)&amp;nbsp;&lt;/li&gt;&lt;li&gt;Patch ride/driver/accept (rideid , acceptance)&lt;/li&gt;&lt;li&gt;Patch ride/driver/updateStatus(rideid, status)&lt;/li&gt;&lt;li&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="290" x="20" y="518" as="geometry" />
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-4" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Rider" vertex="1">
+          <mxGeometry height="60" width="30" x="363" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Client" vertex="1">
+          <mxGeometry height="90" width="60" x="438" y="368" as="geometry" />
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="LB&lt;div&gt;+ API Gateway&lt;/div&gt;&lt;div&gt;+ Routing&lt;/div&gt;&lt;div&gt;+ rate limiting&lt;/div&gt;&lt;div&gt;+ SSL termination&lt;/div&gt;" vertex="1">
+          <mxGeometry height="240" width="120" x="558" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="RideService" vertex="1">
+          <mxGeometry height="60" width="120" x="840" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="RideService" vertex="1">
+          <mxGeometry height="60" width="120" x="846" y="295" as="geometry" />
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="RideService" vertex="1">
+          <mxGeometry height="60" width="120" x="853" y="301" as="geometry" />
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-10" edge="1" parent="1" source="kNX8hHAnbDKZl8OYMUNL-6" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.017;entryY=0.65;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="kNX8hHAnbDKZl8OYMUNL-7" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="740" y="411" as="sourcePoint" />
+            <mxPoint x="790" y="361" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-11" connectable="0" parent="kNX8hHAnbDKZl8OYMUNL-10" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Get fare estimate&lt;br&gt;Accept&lt;div&gt;Update&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0207" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="3rd party Mapping for ML for estimate and Time prediction" vertex="1">
+          <mxGeometry height="80" width="120" x="850" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-13" edge="1" parent="1" source="kNX8hHAnbDKZl8OYMUNL-9" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="kNX8hHAnbDKZl8OYMUNL-12" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="875" y="260" as="sourcePoint" />
+            <mxPoint x="925" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-14" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="Primary (DynamoDB)" vertex="1">
+          <mxGeometry height="84" width="78" x="1172" y="276" as="geometry" />
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Ride&lt;br&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;id&lt;/li&gt;&lt;li&gt;Riderid&lt;/li&gt;&lt;li&gt;Fare&lt;/li&gt;&lt;li&gt;ETA&lt;/li&gt;&lt;li&gt;Source&lt;/li&gt;&lt;li&gt;Destination&lt;/li&gt;&lt;li&gt;Status&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="130" x="1260" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-16" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Rider&lt;br&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Id&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Metadata&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="130" x="1410" y="164" as="geometry" />
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-17" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Ridematching Service&lt;div&gt;Match rider &amp;amp; Driver&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="127" x="893" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-18" edge="1" parent="1" source="kNX8hHAnbDKZl8OYMUNL-6" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="kNX8hHAnbDKZl8OYMUNL-17" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="740" y="470" as="sourcePoint" />
+            <mxPoint x="790" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-36" connectable="0" parent="kNX8hHAnbDKZl8OYMUNL-18" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Request ride&lt;div&gt;&amp;nbsp;Async&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.021" y="1" as="geometry">
+            <mxPoint x="-43" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-19" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="Redis GeoHashing Store&amp;nbsp;" vertex="1">
+          <mxGeometry height="105" width="80" x="1166" y="395" as="geometry" />
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-20" edge="1" parent="1" source="kNX8hHAnbDKZl8OYMUNL-9" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" target="kNX8hHAnbDKZl8OYMUNL-14" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="880" y="520" as="sourcePoint" />
+            <mxPoint x="930" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-21" edge="1" parent="1" source="kNX8hHAnbDKZl8OYMUNL-17" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" target="kNX8hHAnbDKZl8OYMUNL-19" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="880" y="520" as="sourcePoint" />
+            <mxPoint x="930" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-38" connectable="0" parent="kNX8hHAnbDKZl8OYMUNL-21" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;GetAvailable Drivers&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Use estimation to find eta&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;rather than distance&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.0533" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-22" edge="1" parent="1" source="kNX8hHAnbDKZl8OYMUNL-5" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.033;entryY=0.471;entryDx=0;entryDy=0;entryPerimeter=0;" target="kNX8hHAnbDKZl8OYMUNL-6" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="848" y="520" as="sourcePoint" />
+            <mxPoint x="898" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-25" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Rider" vertex="1">
+          <mxGeometry height="60" width="30" x="363" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-26" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Driver" vertex="1">
+          <mxGeometry height="60" width="60" x="438" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-27" edge="1" parent="1" source="kNX8hHAnbDKZl8OYMUNL-26" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=0.983;exitY=0.383;exitDx=0;exitDy=0;exitPerimeter=0;" target="kNX8hHAnbDKZl8OYMUNL-6" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="778" y="580" as="sourcePoint" />
+            <mxPoint x="828" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-28" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Location Service" vertex="1">
+          <mxGeometry height="60" width="120" x="843" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-29" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Location Service" vertex="1">
+          <mxGeometry height="60" width="120" x="850" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-30" edge="1" parent="1" source="kNX8hHAnbDKZl8OYMUNL-6" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1.017;exitY=0.533;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="kNX8hHAnbDKZl8OYMUNL-28" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="810" y="580" as="sourcePoint" />
+            <mxPoint x="860" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-32" connectable="0" parent="kNX8hHAnbDKZl8OYMUNL-30" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Update location" vertex="1">
+          <mxGeometry relative="1" x="-0.0368" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-31" edge="1" parent="1" source="kNX8hHAnbDKZl8OYMUNL-29" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=52.5;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="kNX8hHAnbDKZl8OYMUNL-19" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="810" y="580" as="sourcePoint" />
+            <mxPoint x="860" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-39" connectable="0" parent="kNX8hHAnbDKZl8OYMUNL-31" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="use Geohashing&amp;nbsp;&lt;div&gt;f&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;or storing location&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.0061" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-33" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;Driver:&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;id&lt;/li&gt;&lt;li&gt;Metadata...&lt;/li&gt;&lt;li&gt;Status [inride, offline, available, ride-requested]&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="220" x="1260" y="368" as="geometry" />
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-34" edge="1" parent="1" source="kNX8hHAnbDKZl8OYMUNL-26" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" target="kNX8hHAnbDKZl8OYMUNL-17" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="710" y="630" />
+            </Array>
+            <mxPoint x="780" y="525" as="sourcePoint" />
+            <mxPoint x="830" y="475" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-35" connectable="0" parent="kNX8hHAnbDKZl8OYMUNL-34" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Push Notif&amp;nbsp;&lt;div&gt;to accept /Reject&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.5808" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-37" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Location DBAnd Service:&lt;div&gt;&lt;ul&gt;&lt;li&gt;We have 6M driver&lt;/li&gt;&lt;li&gt;3M active drivers&lt;/li&gt;&lt;li&gt;We have location update every 5 sec so 600 K TPS&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;We need Query with Lat Long which is two dimensional data&amp;nbsp;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;Explore Geospatial index + with Quadtrees [Post GIS] - easy to handle geo search but not possible for the TPS&lt;/div&gt;&lt;div&gt;PostgresSQL limits &amp;lt; than required TPS&lt;/div&gt;&lt;div&gt;Explore redis geo hashing&amp;nbsp;&lt;br&gt;Use Geo sharding for the store&lt;br&gt;try optimizing the location update:&lt;br&gt;Adaptively in the Client side - no major change in location/slow speed location update reduces from 5 sec -&amp;gt; upwards like 1 min&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Driver heartbeat -&amp;gt; unavailabe mark driver status not ready&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="290" width="380" x="1030" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-40" edge="1" parent="1" source="kNX8hHAnbDKZl8OYMUNL-17" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=52.5;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="kNX8hHAnbDKZl8OYMUNL-14" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="980" y="418" as="sourcePoint" />
+            <mxPoint x="1030" y="368" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-41" connectable="0" parent="kNX8hHAnbDKZl8OYMUNL-40" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Update driver Status&amp;nbsp;" vertex="1">
+          <mxGeometry relative="1" x="0.0015" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-42" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;p dir=&quot;auto&quot; data-start=&quot;1099&quot; data-end=&quot;1115&quot; class=&quot;PDq2pG_selectionAnchorContainer&quot;&gt;&lt;strong data-start=&quot;1099&quot; data-end=&quot;1115&quot;&gt;Ride Request&lt;/strong&gt;&lt;/p&gt;&lt;ul data-start=&quot;1118&quot; data-end=&quot;1662&quot;&gt;&lt;li data-section-id=&quot;lr14p5&quot; data-start=&quot;1118&quot; data-end=&quot;1177&quot;&gt;Find available drivers in the rider&#39;s H3/geospatial area.&lt;/li&gt;&lt;li data-section-id=&quot;lr14p5&quot; data-start=&quot;1118&quot; data-end=&quot;1177&quot;&gt;Use ML to find ETA and sort as per ETA ather than relying on distance only.&lt;/li&gt;&lt;li data-section-id=&quot;lr14p5&quot; data-start=&quot;1118&quot; data-end=&quot;1177&quot;&gt;Use a driver lock tack to hold driver locking as dynamo does not support row level pessimistic locking.&lt;/li&gt;&lt;li data-section-id=&quot;1i85g4i&quot; data-start=&quot;1180&quot; data-end=&quot;1322&quot;&gt;Atomically reserve one candidate: &lt;code data-start=&quot;1216&quot; data-end=&quot;1238&quot;&gt;AVAILABLE → RESERVED&lt;/code&gt; using a conditional update/CAS to prevent two rides from selecting the same driver.&lt;/li&gt;&lt;li data-section-id=&quot;1ovzdte&quot; data-start=&quot;1325&quot; data-end=&quot;1418&quot;&gt;Release the lock immediately after reservation; don&#39;t hold it while waiting for the driver.&lt;/li&gt;&lt;li data-section-id=&quot;x1499p&quot; data-start=&quot;1421&quot; data-end=&quot;1482&quot;&gt;Notify the driver and wait for acceptance with a short TTL.&lt;/li&gt;&lt;li data-section-id=&quot;1y2nkcb&quot; data-start=&quot;1485&quot; data-end=&quot;1535&quot;&gt;On acceptance, transition &lt;code data-start=&quot;1513&quot; data-end=&quot;1534&quot;&gt;RESERVED → ASSIGNED&lt;/code&gt;.&lt;/li&gt;&lt;li data-section-id=&quot;1scfkcv&quot; data-start=&quot;1538&quot; data-end=&quot;1613&quot;&gt;On rejection/timeout, release the reservation and try the next candidate.&lt;/li&gt;&lt;li data-section-id=&quot;me13zb&quot; data-start=&quot;1616&quot; data-end=&quot;1662&quot;&gt;Make assignment/retry operations idempotent.&lt;/li&gt;&lt;/ul&gt;" vertex="1">
+          <mxGeometry height="210" width="460" x="20" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-43" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Ride request Queue&lt;/font&gt;" vertex="1">
+          <mxGeometry height="37" width="80" x="790" y="403" as="geometry" />
+        </mxCell>
+        <mxCell id="kNX8hHAnbDKZl8OYMUNL-47" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;p dir=&quot;auto&quot; data-start=&quot;1099&quot; data-end=&quot;1115&quot; class=&quot;PDq2pG_selectionAnchorContainer&quot;&gt;&lt;strong data-start=&quot;1099&quot; data-end=&quot;1115&quot;&gt;Ride Status Update&lt;/strong&gt;&lt;/p&gt;&lt;ul data-start=&quot;1118&quot; data-end=&quot;1662&quot;&gt;&lt;li data-section-id=&quot;lr14p5&quot; data-start=&quot;1118&quot; data-end=&quot;1177&quot;&gt;leverage Ride service to update ride to started&lt;/li&gt;&lt;li data-section-id=&quot;lr14p5&quot; data-start=&quot;1118&quot; data-end=&quot;1177&quot;&gt;Use location Service to fetch driver location data -&amp;gt; Push notif to mark ride complete.&lt;/li&gt;&lt;li data-section-id=&quot;lr14p5&quot; data-start=&quot;1118&quot; data-end=&quot;1177&quot;&gt;Use the ride service to update the Ride status to completed.&lt;/li&gt;&lt;li data-section-id=&quot;lr14p5&quot; data-start=&quot;1118&quot; data-end=&quot;1177&quot;&gt;Update driver status to available for rides&lt;/li&gt;&lt;/ul&gt;" vertex="1">
+          <mxGeometry height="210" width="460" x="530" y="840" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
