@@ -14,6 +14,19 @@ Core requirements:
 - Files should be stored durably and efficiently.
 - System should support sharing and multi-region deployment.
 
+NFR:
+- Availability: 99.99%
+- Latency: p99 < 500 ms for real-time message delivery
+- Scalability: Support ~100M concurrent connections with horizontal scaling
+- Durability: No message loss after successful acceptance; retain offline messages for 30 days
+- Reliability: At-least-once delivery with ACK + retry and idempotency
+
+```
+1B registered users
+10% peak concurrency → 100M connections
+~100K connections/server → ~1,000 servers
+```
+
 ---
 
 # 2. High-Level Architecture
