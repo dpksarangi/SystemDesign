@@ -1,0 +1,164 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
+  <diagram name="Page-1" id="dskQALudgwdguB32-wi5">
+    <mxGraphModel dx="1501" dy="1021" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-42" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="920" width="1270" as="geometry" />
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Client&amp;nbsp;" vertex="1">
+          <mxGeometry height="90" width="80" x="110" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="LB&lt;br&gt;+ ApiGateway" vertex="1">
+          <mxGeometry height="220" width="70" x="270" y="255" as="geometry" />
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Chat Service" vertex="1">
+          <mxGeometry height="60" width="120" x="430" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Chat Service" vertex="1">
+          <mxGeometry height="60" width="120" x="440" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Real time Message interaction:&amp;nbsp;&lt;br&gt;The user sends a message and another user should be able to instantly receive the massage.&lt;br&gt;&lt;br&gt;For this realtime usage we need websockets and should always maintain a connection with the client and server&lt;br&gt;&lt;br&gt;We get the msg identify the connection and forward the msg to client again" vertex="1">
+          <mxGeometry height="240" width="200" x="50" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-7" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="&lt;br&gt;MongoDB" vertex="1">
+          <mxGeometry height="100" width="80" x="710" y="182" as="geometry" />
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-8" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="190" y="370" as="sourcePoint" />
+            <mxPoint x="266" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-9" edge="1" parent="1" source="DpQjGeWfk7Bs1uR8Qe6S-3" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="DpQjGeWfk7Bs1uR8Qe6S-4" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="410" y="530" as="sourcePoint" />
+            <mxPoint x="486" y="532" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;File Upload Usecase:&lt;br&gt;The user uploads a file&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;this will send the server a request to upload a file&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Server creates a presigned URL then returns the URL to client and client uses that url to upload data to Blob storage&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;in case of download the client recieves a msg with the media ID and presigned url and then downloads the content directly from blob storage&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;DeepDive:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Client confirms the upload completion with a checksum we ensure completion with checksum match and mark uploaded&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="300" width="210" x="290" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-11" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="Blob Storage" vertex="1">
+          <mxGeometry height="80" width="60" x="570" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-12" edge="1" parent="1" source="DpQjGeWfk7Bs1uR8Qe6S-4" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" target="DpQjGeWfk7Bs1uR8Qe6S-11" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="500" y="540" as="sourcePoint" />
+            <mxPoint x="550" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-14" connectable="0" parent="DpQjGeWfk7Bs1uR8Qe6S-12" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Create Presigned URL&amp;nbsp;&lt;div&gt;for media uploads&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0043" y="1" as="geometry">
+            <mxPoint x="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-13" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="DpQjGeWfk7Bs1uR8Qe6S-11" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="250" y="130" />
+            </Array>
+            <mxPoint x="130" y="320" as="sourcePoint" />
+            <mxPoint x="180" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-17" connectable="0" parent="DpQjGeWfk7Bs1uR8Qe6S-13" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Upload and download directly f&lt;br&gt;from Blob using Presigned URl" vertex="1">
+          <mxGeometry relative="1" x="0.4157" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-18" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Group Interaction:&lt;br&gt;Create a Group:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Other User gets notified with websockets.&lt;br&gt;now for each message in group the group chat service will fetch the list of users and then foreward the massage to there websockets.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;DeepDive:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;fanout architecture.&lt;br&gt;Publishes message into a queue&lt;br&gt;queue is consumed and worker finds all the users in that group and identify the websockets and foreward the message.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="300" width="210" x="540" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-19" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="UserDetails:&lt;div&gt;&lt;ul&gt;&lt;li style=&quot;&quot;&gt;ID&lt;/li&gt;&lt;li style=&quot;&quot;&gt;Pic&lt;/li&gt;&lt;li style=&quot;&quot;&gt;cool tag&lt;/li&gt;&lt;li style=&quot;&quot;&gt;status&lt;/li&gt;&lt;li style=&quot;&quot;&gt;last seen&lt;/li&gt;&lt;/ul&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="140" width="110" x="846" y="188" as="geometry" />
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-20" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="GroupDetails:&lt;div&gt;&lt;ul&gt;&lt;li style=&quot;&quot;&gt;ID&lt;/li&gt;&lt;li style=&quot;&quot;&gt;Pic&lt;/li&gt;&lt;li style=&quot;&quot;&gt;Name&lt;/li&gt;&lt;li style=&quot;&quot;&gt;cool tag&lt;/li&gt;&lt;li style=&quot;&quot;&gt;status&lt;br&gt;&lt;/li&gt;&lt;li style=&quot;&quot;&gt;UserDetails[]&lt;br&gt;&lt;/li&gt;&lt;ul&gt;&lt;li style=&quot;&quot;&gt;UserIds&lt;/li&gt;&lt;li style=&quot;&quot;&gt;joinedOn&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="172" width="210" x="980" y="182" as="geometry" />
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-22" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="GoupChat Service" vertex="1">
+          <mxGeometry height="60" width="120" x="430" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-23" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="GoupChat Service" vertex="1">
+          <mxGeometry height="60" width="120" x="440" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-24" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="GoupChatQueue&lt;div&gt;partitioned by&lt;br&gt;Group/Conv iD&lt;/div&gt;" vertex="1">
+          <mxGeometry height="51" width="120" x="600" y="529" as="geometry" />
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-25" edge="1" parent="1" source="DpQjGeWfk7Bs1uR8Qe6S-23" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=0.983;exitY=0.367;exitDx=0;exitDy=0;exitPerimeter=0;" target="DpQjGeWfk7Bs1uR8Qe6S-24" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="520" y="640" as="sourcePoint" />
+            <mxPoint x="570" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-26" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="FanOutConsumer" vertex="1">
+          <mxGeometry height="70" width="130" x="790" y="514" as="geometry" />
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-27" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=-0.031;entryY=0.414;entryDx=0;entryDy=0;entryPerimeter=0;" target="DpQjGeWfk7Bs1uR8Qe6S-26" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="720" y="544" as="sourcePoint" />
+            <mxPoint x="770" y="494" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-28" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.143;entryDx=0;entryDy=0;entryPerimeter=0;" target="DpQjGeWfk7Bs1uR8Qe6S-26" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="560" y="360" as="sourcePoint" />
+            <mxPoint x="610" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-30" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="UserChatStore&lt;div&gt;&lt;ul&gt;&lt;li style=&quot;&quot;&gt;ID&lt;/li&gt;&lt;li style=&quot;&quot;&gt;MessageConetents{}&lt;/li&gt;&lt;li style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Timestamps&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;&quot;&gt;status&lt;/li&gt;&lt;/ul&gt;[TTL - 30Days]&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="154" x="846" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-31" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Identify User Offline Publish message to a Chat history store" vertex="1">
+          <mxGeometry height="50" width="150" x="670" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-32" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="DpQjGeWfk7Bs1uR8Qe6S-31" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="560" y="350" as="sourcePoint" />
+            <mxPoint x="610" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-33" edge="1" parent="1" source="DpQjGeWfk7Bs1uR8Qe6S-31" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.873;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=1;entryDx=0;entryDy=-15;entryPerimeter=0;" target="DpQjGeWfk7Bs1uR8Qe6S-7" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="740" y="320" as="sourcePoint" />
+            <mxPoint x="790" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-34" edge="1" parent="1" source="DpQjGeWfk7Bs1uR8Qe6S-4" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=-0.012;entryY=0.41;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0;exitDx=0;exitDy=0;" target="DpQjGeWfk7Bs1uR8Qe6S-7" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="650" y="250" />
+            </Array>
+            <mxPoint x="540" y="640" as="sourcePoint" />
+            <mxPoint x="590" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-35" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Redis PUB-SUB&lt;br&gt;&amp;nbsp;shard with userid&lt;br&gt;message not stored&amp;nbsp;&lt;br&gt;to be fetched from&amp;nbsp;&lt;br&gt;UserChatStore" vertex="1">
+          <mxGeometry height="100" width="130" x="340" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-37" edge="1" parent="1" source="DpQjGeWfk7Bs1uR8Qe6S-4" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.45;exitY=-0.033;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="390" y="320" as="sourcePoint" />
+            <mxPoint x="440" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-38" edge="1" parent="1" source="DpQjGeWfk7Bs1uR8Qe6S-3" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1.014;exitY=0.791;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="DpQjGeWfk7Bs1uR8Qe6S-22" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="510" y="500" as="sourcePoint" />
+            <mxPoint x="560" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-39" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Offline User Scenario&lt;br&gt;User sends message server not able to find the websocket- persist the message into UserChatStore with some TTL say 30 days. When user comes back online after establishing the connection publish all pending messages in userChatstore with undelivered status to the user.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;This also enables us to create a UserChatStore which can be leveraged with Redis pubsub to scal out direct message to hold billions of connections and robustness increased with persisted message in case of network or sockets disconnection.&lt;br&gt;this will enable us to enforce a ack based delivery reattempt of messages.&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="300" width="210" x="800" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-40" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div style=&quot;&quot;&gt;What is Redis PubSub Solving here&lt;br&gt;We have scaled chatservice now how do user1 message on server1 go to user2 whose connection is living in server2.&lt;br&gt;We need to store a mapping of user-server so that we can forward the message to users on other server.&lt;br&gt;&lt;br&gt;solution with each new connection user subscribes to its own message pub/sub and it will be only message id with message living in the userchatstore.&lt;br&gt;So the size of pubsub topics stay small and scaled to billions&lt;/div&gt;" vertex="1">
+          <mxGeometry height="300" width="210" x="1040" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="DpQjGeWfk7Bs1uR8Qe6S-41" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Server handles idempotency using message ID created by client&lt;br&gt;Client also ensures the idempotency of messages with message id" vertex="1">
+          <mxGeometry height="60" width="210" x="690" y="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
