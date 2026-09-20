@@ -1,0 +1,196 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
+  <diagram name="Page-1" id="-lRgQLCEW6rnABTBpHIr">
+    <mxGraphModel dx="1501" dy="2121" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;TicketMaster&lt;/span&gt;&lt;/div&gt;&lt;div&gt;Requirements:&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;User is able to see all the events&lt;/li&gt;&lt;li&gt;User is able to check available seats&lt;/li&gt;&lt;li&gt;User is able to Select the system&lt;/li&gt;&lt;li&gt;User is able to Book the Ticket by completing Payments&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;Out of Scope:&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Cancelation&lt;/li&gt;&lt;li&gt;Payments&lt;/li&gt;&lt;li&gt;EventCreation&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;NFRs:&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Zero double booking&lt;/li&gt;&lt;li&gt;Low latency for look up and selection&lt;/li&gt;&lt;li&gt;Highly available Look up service&lt;/li&gt;&lt;li&gt;read &amp;gt;&amp;gt; write&lt;/li&gt;&lt;li&gt;Handle popular event booking&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="350" width="370" x="40" y="-40" as="geometry" />
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Core entities&lt;div&gt;&lt;ul&gt;&lt;li&gt;Event&lt;/li&gt;&lt;li&gt;User&lt;/li&gt;&lt;li&gt;Venue&lt;/li&gt;&lt;li&gt;Performer&lt;/li&gt;&lt;li&gt;Ticket&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="320" x="40" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="APIs:&lt;div&gt;&lt;ul&gt;&lt;li&gt;GetEvents(optional performer,Venue, Event)&lt;/li&gt;&lt;li&gt;-&amp;gt; return Performer, Venue, event, Ticket list&lt;/li&gt;&lt;li&gt;Get search(text based, location based etc)&lt;/li&gt;&lt;li&gt;BookEvent(eventid, ticket(seat id)&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="300" x="40" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Client" vertex="1">
+          <mxGeometry height="60" width="70" x="370" y="335" as="geometry" />
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="LB&lt;br&gt;API Gateway&lt;div&gt;Rate limiting&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="140" width="80" x="495" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event Service" vertex="1">
+          <mxGeometry height="50" width="100" x="796.5" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event Service" vertex="1">
+          <mxGeometry height="50" width="100" x="803.5" y="306" as="geometry" />
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-8" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="Postgres" vertex="1">
+          <mxGeometry height="80" width="60" x="1190" y="304" as="geometry" />
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event Service" vertex="1">
+          <mxGeometry height="50" width="100" x="796.5" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Search Service" vertex="1">
+          <mxGeometry height="50" width="100" x="803.5" y="206" as="geometry" />
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-11" edge="1" parent="1" source="CtbqzY2CMxK35j-hzqa_-5" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.988;exitY=0.443;exitDx=0;exitDy=0;exitPerimeter=0;" target="CtbqzY2CMxK35j-hzqa_-6" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="650" y="370" as="sourcePoint" />
+            <mxPoint x="700" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-45" connectable="0" parent="CtbqzY2CMxK35j-hzqa_-11" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Fetch Event Details&lt;br&gt;timings, seats price etc" vertex="1">
+          <mxGeometry relative="1" x="0.01" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-12" edge="1" parent="1" source="CtbqzY2CMxK35j-hzqa_-7" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" target="CtbqzY2CMxK35j-hzqa_-8" value=" ">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points" />
+            <mxPoint x="930" y="230" as="sourcePoint" />
+            <mxPoint x="980" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event Service" vertex="1">
+          <mxGeometry height="50" width="100" x="800" y="384" as="geometry" />
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Booking Service" vertex="1">
+          <mxGeometry height="50" width="100" x="807" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-15" edge="1" parent="1" source="CtbqzY2CMxK35j-hzqa_-5" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1.013;exitY=0.364;exitDx=0;exitDy=0;exitPerimeter=0;" target="CtbqzY2CMxK35j-hzqa_-9" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="670" y="500" as="sourcePoint" />
+            <mxPoint x="720" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-46" connectable="0" parent="CtbqzY2CMxK35j-hzqa_-15" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Text, location etc&amp;nbsp;&lt;div&gt;based search for events&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.0498" y="4" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-16" edge="1" parent="1" source="CtbqzY2CMxK35j-hzqa_-5" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="740" y="396" as="sourcePoint" />
+            <mxPoint x="650" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-17" edge="1" parent="1" source="CtbqzY2CMxK35j-hzqa_-10" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=52.5;entryPerimeter=0;" target="CtbqzY2CMxK35j-hzqa_-28" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="970" y="320" as="sourcePoint" />
+            <mxPoint x="1030" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-31" connectable="0" parent="CtbqzY2CMxK35j-hzqa_-17" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Search&amp;nbsp;&lt;div&gt;the DB&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.0443" y="3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-18" edge="1" parent="1" source="CtbqzY2CMxK35j-hzqa_-14" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.9;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" target="CtbqzY2CMxK35j-hzqa_-8" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="670" y="500" as="sourcePoint" />
+            <mxPoint x="720" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-21" edge="1" parent="1" source="CtbqzY2CMxK35j-hzqa_-23" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.613;exitY=0;exitDx=0;exitDy=0;entryX=0.43;entryY=1.04;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" target="CtbqzY2CMxK35j-hzqa_-14" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="875" y="630" as="sourcePoint" />
+            <mxPoint x="827.5" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-40" connectable="0" parent="CtbqzY2CMxK35j-hzqa_-21" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Use webhook to&amp;nbsp;&lt;div&gt;get Payment Update&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0112" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-22" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Stripe&amp;nbsp;" vertex="1">
+          <mxGeometry height="30" width="80" x="820" y="515" as="geometry" />
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-23" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Paypal" vertex="1">
+          <mxGeometry height="30" width="80" x="910" y="515" as="geometry" />
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-24" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="UPI" vertex="1">
+          <mxGeometry height="30" width="80" x="820" y="555" as="geometry" />
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-28" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="Elastic&lt;div&gt;Search&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="60" x="1060" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-29" edge="1" parent="1" source="CtbqzY2CMxK35j-hzqa_-28" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=27.5;entryPerimeter=0;exitX=1;exitY=0;exitDx=0;exitDy=52.5;exitPerimeter=0;" target="CtbqzY2CMxK35j-hzqa_-8" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="670" y="500" as="sourcePoint" />
+            <mxPoint x="720" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-30" connectable="0" parent="CtbqzY2CMxK35j-hzqa_-29" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Connecters CDC" vertex="1">
+          <mxGeometry relative="1" x="-0.0312" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-32" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Radis" vertex="1">
+          <mxGeometry height="55" width="60" x="1070" y="434" as="geometry" />
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-33" edge="1" parent="1" source="CtbqzY2CMxK35j-hzqa_-14" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="CtbqzY2CMxK35j-hzqa_-32" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="940" y="490" as="sourcePoint" />
+            <mxPoint x="990" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-34" connectable="0" parent="CtbqzY2CMxK35j-hzqa_-33" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Search for if seat&amp;nbsp;&lt;div&gt;blocked for booking&lt;br&gt;With TTL - x mins&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.1291" y="3" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-35" edge="1" parent="1" source="CtbqzY2CMxK35j-hzqa_-4" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.012;entryY=0.457;entryDx=0;entryDy=0;entryPerimeter=0;" target="CtbqzY2CMxK35j-hzqa_-5" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="455" y="374" as="sourcePoint" />
+            <mxPoint x="505" y="324" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-36" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Hot Events" vertex="1">
+          <mxGeometry height="41" width="50" x="970" y="154.5" as="geometry" />
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-37" edge="1" parent="1" source="CtbqzY2CMxK35j-hzqa_-10" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="CtbqzY2CMxK35j-hzqa_-36" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="910" y="310" as="sourcePoint" />
+            <mxPoint x="949" y="279" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-38" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="Booking queue" vertex="1">
+          <mxGeometry height="30" width="120" x="620" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-39" edge="1" parent="1" source="CtbqzY2CMxK35j-hzqa_-38" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="CtbqzY2CMxK35j-hzqa_-14" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="750" y="460" as="sourcePoint" />
+            <mxPoint x="800" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-42" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="System flow:&lt;div&gt;User Search for Events -&amp;gt; gets list of events -&amp;gt; search for Event details and seats for a selected Event -&amp;gt; Select seats and book -&amp;gt; Booking checks the Seat if avialable block and go for payment -&amp;gt; async processing of the payment with webhook -&amp;gt; payment completed -&amp;gt; booking confirmed -&amp;gt; event updated&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="890" x="401.5" y="-50" as="geometry" />
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-43" edge="1" parent="1" source="CtbqzY2CMxK35j-hzqa_-5" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="CtbqzY2CMxK35j-hzqa_-13" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="670" y="400" as="sourcePoint" />
+            <mxPoint x="720" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-44" connectable="0" parent="CtbqzY2CMxK35j-hzqa_-43" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="For Booking status&amp;nbsp;&lt;div&gt;Query through SSE&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.0107" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-47" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Search with Text , Location etc:&lt;div&gt;Our searching needs to based on text so a query to Postgres will not be efficient here. We can utilised the inverted indexing of Elasticsearch to handle this. The event updates can be published to elastic serach asynchronusly and we can leverate some CDC connecters that comes out of the box.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="330" x="40" y="606" as="geometry" />
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-48" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Strong consistency in seat booking :&lt;div&gt;Redis will be used as a temporary coordinator of the seats. We lookup if the seat is available in redis then it will be blocked and book request fails. The record have TTL so it expires after sometime in case of drop in the flow. In case of simultaneously checking the Redis for non existent seat it creates entry with first request and second request fails.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="330" x="401.5" y="606" as="geometry" />
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-49" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;Hot Events:&lt;br&gt;The Hot events fetch will go through the redis to fasten up and save effort on search.&lt;br&gt;for booking we will enable the processing through booking queue and the flow can be controlled with back pressure.&lt;br&gt;We enable the confirmation with SSE to fetch booking status.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="360" x="740" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="CtbqzY2CMxK35j-hzqa_-50" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Payments:&lt;br&gt;Usually the payments are docoupled but for this sytem we integrated with the booking service for simplicity. But the Payments will be done asynchronously and the update from payments will be done with the Webhook." vertex="1">
+          <mxGeometry height="110" width="330" x="1110" y="590" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
