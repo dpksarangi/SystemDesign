@@ -1,0 +1,236 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
+  <diagram name="Page-1" id="Ti6-xEmFqp1U_rrzkcxd">
+    <mxGraphModel dx="3044" dy="1492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-59" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="740" width="1590" x="-220" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="client" vertex="1">
+          <mxGeometry height="130" width="120" x="130" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="LB +&lt;br&gt;ApiGateway +&lt;br&gt;Ratelimitter&lt;br&gt;SSL + Handshake" vertex="1">
+          <mxGeometry height="220" width="80" x="390" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Upload Service" vertex="1">
+          <mxGeometry height="60" width="120" x="590" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-4" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="Mongo" vertex="1">
+          <mxGeometry height="80" width="60" x="902" y="323" as="geometry" />
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-5" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="Blob Bucket" vertex="1">
+          <mxGeometry height="80" width="60" x="780" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-6" edge="1" parent="1" source="Mlf50YvzvTNYvt9qVrrf-1" style="endArrow=classic;html=1;rounded=0;exitX=0.575;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="Mlf50YvzvTNYvt9qVrrf-5" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="480" y="140" />
+            </Array>
+            <mxPoint x="540" y="520" as="sourcePoint" />
+            <mxPoint x="590" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-7" connectable="0" parent="Mlf50YvzvTNYvt9qVrrf-6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Upload directly from client&lt;div&gt;&amp;nbsp;through Presigned Url&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0875" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-8" edge="1" parent="1" source="Mlf50YvzvTNYvt9qVrrf-9" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=27.5;entryPerimeter=0;exitX=0.942;exitY=0.625;exitDx=0;exitDy=0;exitPerimeter=0;" target="Mlf50YvzvTNYvt9qVrrf-5" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="300" y="70" as="sourcePoint" />
+            <mxPoint x="590" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-9" parent="1" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" value="CDN to deliver&amp;nbsp;&lt;div&gt;Media across&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="170" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-10" edge="1" parent="1" source="Mlf50YvzvTNYvt9qVrrf-1" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.233;entryY=0.85;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.558;exitY=-0.023;exitDx=0;exitDy=0;exitPerimeter=0;" target="Mlf50YvzvTNYvt9qVrrf-9" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="540" y="410" as="sourcePoint" />
+            <mxPoint x="590" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Chunking Fingerprinting&lt;br&gt;Checksum creation" vertex="1">
+          <mxGeometry height="70" width="110" x="75" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Bandwidth detection&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="120" x="70" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-13" edge="1" parent="1" source="Mlf50YvzvTNYvt9qVrrf-1" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.025;entryY=0.432;entryDx=0;entryDy=0;entryPerimeter=0;" target="Mlf50YvzvTNYvt9qVrrf-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="540" y="410" as="sourcePoint" />
+            <mxPoint x="590" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-14" edge="1" parent="1" source="Mlf50YvzvTNYvt9qVrrf-2" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1.025;exitY=0.459;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Mlf50YvzvTNYvt9qVrrf-3" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="540" y="410" as="sourcePoint" />
+            <mxPoint x="590" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-15" edge="1" parent="1" source="Mlf50YvzvTNYvt9qVrrf-3" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.145;entryY=1;entryDx=0;entryDy=-4.35;entryPerimeter=0;exitX=0.883;exitY=-0.033;exitDx=0;exitDy=0;exitPerimeter=0;" target="Mlf50YvzvTNYvt9qVrrf-5" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="710" y="200" as="sourcePoint" />
+            <mxPoint x="760" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-16" connectable="0" parent="Mlf50YvzvTNYvt9qVrrf-15" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Presigned URL creation&lt;br&gt;Checksum verification&lt;br&gt;Upload completion verification" vertex="1">
+          <mxGeometry relative="1" x="-0.0152" y="3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-17" edge="1" parent="1" source="Mlf50YvzvTNYvt9qVrrf-3" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=27.5;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="Mlf50YvzvTNYvt9qVrrf-4" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="540" y="410" as="sourcePoint" />
+            <mxPoint x="590" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-18" connectable="0" parent="Mlf50YvzvTNYvt9qVrrf-17" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Video Meta Data creation" vertex="1">
+          <mxGeometry relative="1" x="-0.071" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-19" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Streaming Service" vertex="1">
+          <mxGeometry height="60" width="120" x="590" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-20" edge="1" parent="1" source="Mlf50YvzvTNYvt9qVrrf-2" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1.013;exitY=0.55;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Mlf50YvzvTNYvt9qVrrf-19" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="540" y="410" as="sourcePoint" />
+            <mxPoint x="590" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-21" edge="1" parent="1" source="Mlf50YvzvTNYvt9qVrrf-19" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=-15;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="Mlf50YvzvTNYvt9qVrrf-4" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="540" y="410" as="sourcePoint" />
+            <mxPoint x="590" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-28" connectable="0" parent="Mlf50YvzvTNYvt9qVrrf-21" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Fetch video manifest file&lt;div&gt;with VideoID&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.083" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-22" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Search Service" vertex="1">
+          <mxGeometry height="60" width="120" x="590" y="495" as="geometry" />
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-23" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="Elastic&lt;div&gt;Search&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="60" x="902" y="498" as="geometry" />
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-24" edge="1" parent="1" source="Mlf50YvzvTNYvt9qVrrf-23" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.7;entryY=1.013;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.733;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" target="Mlf50YvzvTNYvt9qVrrf-4" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points" />
+            <mxPoint x="972" y="443" as="sourcePoint" />
+            <mxPoint x="642" y="373" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-25" connectable="0" parent="Mlf50YvzvTNYvt9qVrrf-24" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="CDC streaming and&amp;nbsp;&lt;div&gt;updating for uploaded videos&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-26" edge="1" parent="1" source="Mlf50YvzvTNYvt9qVrrf-22" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="Mlf50YvzvTNYvt9qVrrf-23" value="Fetch matching videos&lt;div&gt;&amp;nbsp;with text search&lt;/div&gt;">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="540" y="410" as="sourcePoint" />
+            <mxPoint x="590" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-27" edge="1" parent="1" source="Mlf50YvzvTNYvt9qVrrf-2" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.633;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.975;exitY=0.632;exitDx=0;exitDy=0;exitPerimeter=0;" target="Mlf50YvzvTNYvt9qVrrf-22" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="490" y="580" as="sourcePoint" />
+            <mxPoint x="540" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-46" edge="1" parent="1" source="Mlf50YvzvTNYvt9qVrrf-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="Mlf50YvzvTNYvt9qVrrf-47">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1160" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-29" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="TranscoderService" vertex="1">
+          <mxGeometry height="60" width="120" x="990" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-30" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Upload Service" vertex="1">
+          <mxGeometry height="60" width="120" x="600" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-31" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Streaming Service" vertex="1">
+          <mxGeometry height="60" width="120" x="600" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-32" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Search Service" vertex="1">
+          <mxGeometry height="60" width="120" x="600" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-33" edge="1" parent="1" source="Mlf50YvzvTNYvt9qVrrf-37" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=-0.017;entryY=0.65;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="Mlf50YvzvTNYvt9qVrrf-29" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="540" y="410" as="sourcePoint" />
+            <mxPoint x="590" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-34" connectable="0" parent="Mlf50YvzvTNYvt9qVrrf-33" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Fetch New uploads" vertex="1">
+          <mxGeometry relative="1" x="0.039" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-35" edge="1" parent="1" source="Mlf50YvzvTNYvt9qVrrf-5" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.808;entryY=0.033;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryPerimeter=0;" target="Mlf50YvzvTNYvt9qVrrf-29" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="920" y="70" />
+            </Array>
+            <mxPoint x="540" y="410" as="sourcePoint" />
+            <mxPoint x="590" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-36" connectable="0" parent="Mlf50YvzvTNYvt9qVrrf-35" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Fetch videos and Transcoder&amp;nbsp;&lt;div&gt;to all other video qualities&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.4092" y="3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-37" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="New Upload Events" vertex="1">
+          <mxGeometry height="30" width="120" x="800" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-38" edge="1" parent="1" source="Mlf50YvzvTNYvt9qVrrf-30" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.133;exitDx=0;exitDy=0;exitPerimeter=0;" target="Mlf50YvzvTNYvt9qVrrf-37" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="540" y="410" as="sourcePoint" />
+            <mxPoint x="590" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-47" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="Publish Transcoding Events" vertex="1">
+          <mxGeometry height="30" width="180" x="1120" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-48" edge="1" parent="1" source="Mlf50YvzvTNYvt9qVrrf-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="Mlf50YvzvTNYvt9qVrrf-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-49" connectable="0" parent="Mlf50YvzvTNYvt9qVrrf-48" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Worker updates the Video&amp;nbsp;&lt;div&gt;record for menifest file path&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0265" y="-4" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-50" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Cache Popular&lt;br&gt;recent videos" vertex="1">
+          <mxGeometry height="65" width="65" x="780" y="435" as="geometry" />
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-51" edge="1" parent="1" source="Mlf50YvzvTNYvt9qVrrf-31" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" target="Mlf50YvzvTNYvt9qVrrf-50" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="580" y="400" as="sourcePoint" />
+            <mxPoint x="630" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-52" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="How to handle multi qualities of the videos:&lt;br&gt;We store qualities details in manifest file.&lt;div&gt;Manifest file stored in Blob storage and its location stored along with the meta data in Mongo DB.&lt;br&gt;Transcoder picks the upload event from upload queue and transcodes it asynchronously.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="270" x="10" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-53" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="After Transcoding completed the event is published in a queue and a worker marks the details in the Mongo DB." vertex="1">
+          <mxGeometry height="90" width="270" x="320" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-54" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Search needs to be in low latency with the text and partial text search support. We will Store video meta data replica in elastic search. The Search returns the video ids with the ranking and displayed to user." vertex="1">
+          <mxGeometry height="90" width="270" x="590" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-55" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Youtube&lt;/span&gt;&lt;/div&gt;&lt;div&gt;Functional requirements:&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;User is able to Upload video&lt;/li&gt;&lt;li&gt;User is able to search video&lt;/li&gt;&lt;li&gt;User is able to stream video&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;NFR:&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Video available in multiple qualities&lt;/li&gt;&lt;li&gt;Search videos is low latency&lt;/li&gt;&lt;li&gt;Streaming is fast&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="240" width="260" x="-170" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-57" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Entities:&lt;div&gt;&lt;ul&gt;&lt;li&gt;Video&lt;/li&gt;&lt;li&gt;User&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="120" x="-210" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="Mlf50YvzvTNYvt9qVrrf-58" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="APIs:&lt;div&gt;&lt;ul&gt;&lt;li&gt;Post(videos,metadata) -&amp;gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;{presigned url, videoid}&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;Stream(videoid) -&amp;gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;{menifest filelocation}&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;Search (text) -&amp;gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;{videoID}&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="220" x="-170" y="355" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
