@@ -1,9 +1,12 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
   <diagram name="Page-1" id="pPJrJhzo__Y3sYvq_z1x">
-    <mxGraphModel dx="1753" dy="1021" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1501" dy="1021" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="01T1CwsmyZ-48zFPOQ1l-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="946" width="1510" x="10" y="104" as="geometry" />
+        </mxCell>
         <mxCell id="kNX8hHAnbDKZl8OYMUNL-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Functional requirements:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;ul&gt;&lt;li&gt;User is able to book rides&lt;/li&gt;&lt;li&gt;User is able to get estimates from start location and destination&lt;/li&gt;&lt;li&gt;Divers are able to accept rides&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;NFR:&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;10 Million rides per day&lt;/li&gt;&lt;li&gt;low latency matching &amp;lt; 1 min or failure&lt;/li&gt;&lt;li&gt;Consistency of matching Ride to driver is 1:1&lt;/li&gt;&lt;li&gt;Highly available outside the matching&lt;/li&gt;&lt;li&gt;handle high throuhput, surges for peak hours or special requests&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="320" width="380" x="13" y="171" as="geometry" />
         </mxCell>
