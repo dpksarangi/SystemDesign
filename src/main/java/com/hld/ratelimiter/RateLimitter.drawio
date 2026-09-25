@@ -1,0 +1,129 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
+  <diagram name="Page-1" id="jnEpfael4UOzXlPxcW7R">
+    <mxGraphModel dx="1426" dy="894" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="zwasDyA0YpmIOW_2o-YI-34" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="560" width="1330" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zwasDyA0YpmIOW_2o-YI-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="Functional:&lt;div&gt;&lt;ul&gt;&lt;li data-section-id=&quot;1lp9ei7&quot; data-start=&quot;1677&quot; data-end=&quot;1754&quot;&gt;Identify clients using:&lt;span aria-hidden=&quot;true&quot; class=&quot;PDq2pG_selectionAnchor&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;ul data-start=&quot;1705&quot; data-end=&quot;1754&quot;&gt;&lt;li data-section-id=&quot;15qij5g&quot; data-start=&quot;1705&quot; data-end=&quot;1714&quot;&gt;User ID&lt;br&gt;&lt;/li&gt;&lt;li data-section-id=&quot;1225r7r&quot; data-start=&quot;1717&quot; data-end=&quot;1726&quot;&gt;API key&lt;br&gt;&lt;/li&gt;&lt;li data-section-id=&quot;yhmtld&quot; data-start=&quot;1729&quot; data-end=&quot;1733&quot;&gt;IP&lt;br&gt;&lt;/li&gt;&lt;li data-section-id=&quot;qpl20n&quot; data-start=&quot;1736&quot; data-end=&quot;1754&quot;&gt;Tenant/client ID&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li data-section-id=&quot;2rhzde&quot; data-start=&quot;1755&quot; data-end=&quot;1793&quot;&gt;Apply configurable rate-limit rules.&lt;br&gt;&lt;/li&gt;&lt;li data-section-id=&quot;1szekak&quot; data-start=&quot;1794&quot; data-end=&quot;1851&quot;&gt;Return rate-limit headers and appropriate status codes.&lt;br&gt;&lt;/li&gt;&lt;li data-section-id=&quot;1l7b9kh&quot; data-start=&quot;1852&quot; data-end=&quot;1901&quot;&gt;Reject requests exceeding the configured limit.&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;DDOS id out of scope&amp;nbsp;&lt;/div&gt;&lt;div&gt;NFR:&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;minimal latency addition&lt;/li&gt;&lt;li&gt;High Availability&amp;nbsp;&lt;/li&gt;&lt;li&gt;scalable to 1M rps&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="254" width="370" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="zwasDyA0YpmIOW_2o-YI-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Client" vertex="1">
+          <mxGeometry height="60" width="120" x="510" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="zwasDyA0YpmIOW_2o-YI-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;Core Entities:&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Request&lt;/li&gt;&lt;li&gt;User&lt;/li&gt;&lt;li&gt;Rules&lt;/li&gt;&lt;/ul&gt;" vertex="1">
+          <mxGeometry height="90" width="120" x="40" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="zwasDyA0YpmIOW_2o-YI-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;System Interfaces&lt;/span&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;IsrequestAllowed(userid) -&amp;gt; valid headers&amp;nbsp;&lt;/li&gt;&lt;/ul&gt;" vertex="1">
+          <mxGeometry height="70" width="270" x="40" y="387" as="geometry" />
+        </mxCell>
+        <mxCell id="zwasDyA0YpmIOW_2o-YI-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="LB" vertex="1">
+          <mxGeometry height="40" width="107" x="790" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="zwasDyA0YpmIOW_2o-YI-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="RateLimitter" vertex="1">
+          <mxGeometry height="50" width="100" x="787" y="286" as="geometry" />
+        </mxCell>
+        <mxCell id="zwasDyA0YpmIOW_2o-YI-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="MyService" vertex="1">
+          <mxGeometry height="60" width="120" x="1147" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="zwasDyA0YpmIOW_2o-YI-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="MyService" vertex="1">
+          <mxGeometry height="60" width="120" x="1152" y="164" as="geometry" />
+        </mxCell>
+        <mxCell id="zwasDyA0YpmIOW_2o-YI-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="MyService" vertex="1">
+          <mxGeometry height="60" width="120" x="1157" y="168" as="geometry" />
+        </mxCell>
+        <mxCell id="zwasDyA0YpmIOW_2o-YI-10" edge="1" parent="1" source="zwasDyA0YpmIOW_2o-YI-2" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="zwasDyA0YpmIOW_2o-YI-5" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="737" y="456" as="sourcePoint" />
+            <mxPoint x="787" y="406" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zwasDyA0YpmIOW_2o-YI-11" edge="1" parent="1" source="zwasDyA0YpmIOW_2o-YI-36" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="zwasDyA0YpmIOW_2o-YI-7" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="737" y="456" as="sourcePoint" />
+            <mxPoint x="787" y="406" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zwasDyA0YpmIOW_2o-YI-14" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Redis" vertex="1">
+          <mxGeometry height="80" width="80" x="797" y="446" as="geometry" />
+        </mxCell>
+        <mxCell id="zwasDyA0YpmIOW_2o-YI-15" edge="1" parent="1" source="zwasDyA0YpmIOW_2o-YI-14" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="zwasDyA0YpmIOW_2o-YI-6" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="737" y="456" as="sourcePoint" />
+            <mxPoint x="787" y="406" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zwasDyA0YpmIOW_2o-YI-17" connectable="0" parent="zwasDyA0YpmIOW_2o-YI-15" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Atomic&amp;nbsp; fetch + update of usage limits&amp;nbsp;&lt;div&gt;shall use lua scripting&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.0545" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zwasDyA0YpmIOW_2o-YI-18" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Redis" vertex="1">
+          <mxGeometry height="80" width="80" x="807" y="456" as="geometry" />
+        </mxCell>
+        <mxCell id="zwasDyA0YpmIOW_2o-YI-19" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;span data-start=&quot;1575&quot; data-end=&quot;1625&quot;&gt;Shard by rate-limit key using Redis hash slots&lt;/span&gt;&lt;br&gt;&lt;span data-start=&quot;1630&quot; data-end=&quot;1684&quot;&gt;Explore geographic sharding for global deployments&lt;/span&gt;" vertex="1">
+          <mxGeometry height="50" width="286.5" x="913.5" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="zwasDyA0YpmIOW_2o-YI-23" edge="1" parent="1" source="zwasDyA0YpmIOW_2o-YI-6" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.421;entryY=0.95;entryDx=0;entryDy=0;entryPerimeter=0;" target="zwasDyA0YpmIOW_2o-YI-5" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="787" y="276" as="sourcePoint" />
+            <mxPoint x="837" y="226" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zwasDyA0YpmIOW_2o-YI-24" connectable="0" parent="zwasDyA0YpmIOW_2o-YI-23" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Hashbased LB" vertex="1">
+          <mxGeometry relative="1" x="0.1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zwasDyA0YpmIOW_2o-YI-25" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="RateLimitter" vertex="1">
+          <mxGeometry height="50" width="100" x="791" y="289" as="geometry" />
+        </mxCell>
+        <mxCell id="zwasDyA0YpmIOW_2o-YI-26" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Identify if we have hot users&lt;br&gt;that defines need for local quota store&lt;br&gt;If there is a chance our client is Walmart they need extreamly high rate limmiting in that case we can store quota in memory decreses need for redis hit on every api call. batch the usage and publish them atomically to redis." vertex="1">
+          <mxGeometry height="130" width="310" x="40" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="zwasDyA0YpmIOW_2o-YI-27" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Do we need hash based Loadbalancing?&lt;br&gt;Depends if we dont expect the hot users and there is no need for in memory quota store we can avoid it but if we expect hot users keeping them directed to single pod helps us use the inmemory store without exploring need for distributed inmemory quota management." vertex="1">
+          <mxGeometry height="90" width="371" x="359" y="474" as="geometry" />
+        </mxCell>
+        <mxCell id="zwasDyA0YpmIOW_2o-YI-30" edge="1" parent="1" source="zwasDyA0YpmIOW_2o-YI-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="zwasDyA0YpmIOW_2o-YI-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zwasDyA0YpmIOW_2o-YI-32" connectable="0" parent="zwasDyA0YpmIOW_2o-YI-30" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Change &lt;br&gt;Propagation" vertex="1">
+          <mxGeometry relative="1" x="0.123" as="geometry">
+            <mxPoint x="1" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zwasDyA0YpmIOW_2o-YI-28" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="Config Store" vertex="1">
+          <mxGeometry height="80" width="60" x="1230" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="zwasDyA0YpmIOW_2o-YI-31" edge="1" parent="1" source="zwasDyA0YpmIOW_2o-YI-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="zwasDyA0YpmIOW_2o-YI-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zwasDyA0YpmIOW_2o-YI-33" connectable="0" parent="zwasDyA0YpmIOW_2o-YI-31" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Pod&amp;nbsp;&lt;div&gt;Subscribes&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0418" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zwasDyA0YpmIOW_2o-YI-29" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="PubSub" vertex="1">
+          <mxGeometry height="20" width="120" x="1017" y="321" as="geometry" />
+        </mxCell>
+        <mxCell id="zwasDyA0YpmIOW_2o-YI-35" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Config Update&lt;br&gt;Async Propagation" vertex="1">
+          <mxGeometry height="40" width="123" x="1010" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="zwasDyA0YpmIOW_2o-YI-37" edge="1" parent="1" source="zwasDyA0YpmIOW_2o-YI-5" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="zwasDyA0YpmIOW_2o-YI-36" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="897" y="190" as="sourcePoint" />
+            <mxPoint x="1147" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zwasDyA0YpmIOW_2o-YI-36" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="API&lt;div&gt;Gateway&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="70" x="980" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="zwasDyA0YpmIOW_2o-YI-38" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;strong data-start=&quot;428&quot; data-end=&quot;444&quot;&gt;429 → Client&lt;/strong&gt;&lt;br&gt;&lt;strong data-start=&quot;449&quot; data-end=&quot;486&quot;&gt;Allowed → API Gateway → MyService&lt;/strong&gt;" vertex="1">
+          <mxGeometry height="30" width="310" x="650" y="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
