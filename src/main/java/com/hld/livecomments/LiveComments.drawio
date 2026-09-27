@@ -1,0 +1,142 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
+  <diagram name="Page-1" id="eXiV0dy1TjvUTX2ol8kq">
+    <mxGraphModel dx="1501" dy="2121" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="MXUQjWeKat6mIb6Z7VlJ-40" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="790" width="1390" x="10" y="-80" as="geometry" />
+        </mxCell>
+        <mxCell id="MXUQjWeKat6mIb6Z7VlJ-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Functional requirements:&lt;div&gt;&lt;ul&gt;&lt;li&gt;User is able to post comment&lt;/li&gt;&lt;li&gt;User is able to see other comments&lt;/li&gt;&lt;li&gt;user is able to reply to other comments&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;NFRs:&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Ability of posting comment on video &amp;gt;&amp;gt; see all comments&amp;nbsp;&lt;/li&gt;&lt;li&gt;low latency of comment posting and replying ~200&lt;/li&gt;&lt;li&gt;High scale thousands of comment / second&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="180" width="360" x="30" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="MXUQjWeKat6mIb6Z7VlJ-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Entities&lt;div&gt;&lt;ul&gt;&lt;li&gt;Video&lt;/li&gt;&lt;li&gt;User&lt;/li&gt;&lt;li&gt;Comment&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="100" x="30" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="MXUQjWeKat6mIb6Z7VlJ-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="APIs:&lt;div&gt;&lt;ul&gt;&lt;li&gt;GetVideos&lt;/li&gt;&lt;li&gt;GetComments&lt;/li&gt;&lt;li&gt;PostComment&lt;/li&gt;&lt;li&gt;PostReply&lt;/li&gt;&lt;li&gt;GetReplies&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="140" x="30" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="MXUQjWeKat6mIb6Z7VlJ-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Client" vertex="1">
+          <mxGeometry height="60" width="80" x="400" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="MXUQjWeKat6mIb6Z7VlJ-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;" value="OUT OF Scope&lt;div&gt;Vaguely touched&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="360" width="780" x="380" y="-50" as="geometry" />
+        </mxCell>
+        <mxCell id="MXUQjWeKat6mIb6Z7VlJ-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="LB&lt;div&gt;APIGateway&lt;/div&gt;&lt;div&gt;RateLimmiting&lt;/div&gt;&lt;div&gt;SSLHandshake&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="300" width="90" x="580" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="MXUQjWeKat6mIb6Z7VlJ-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="VideoService" vertex="1">
+          <mxGeometry height="60" width="120" x="770" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="MXUQjWeKat6mIb6Z7VlJ-8" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="MongoDB" vertex="1">
+          <mxGeometry height="80" width="60" x="1020" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="MXUQjWeKat6mIb6Z7VlJ-33" edge="1" parent="1" source="MXUQjWeKat6mIb6Z7VlJ-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="MXUQjWeKat6mIb6Z7VlJ-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MXUQjWeKat6mIb6Z7VlJ-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="CommentService" vertex="1">
+          <mxGeometry height="60" width="120" x="790" y="342" as="geometry" />
+        </mxCell>
+        <mxCell id="MXUQjWeKat6mIb6Z7VlJ-11" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="Mongo&lt;div&gt;Comments&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="60" x="1020" y="331" as="geometry" />
+        </mxCell>
+        <mxCell id="MXUQjWeKat6mIb6Z7VlJ-13" edge="1" parent="1" source="MXUQjWeKat6mIb6Z7VlJ-6" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=1.022;exitY=0.46;exitDx=0;exitDy=0;exitPerimeter=0;" target="MXUQjWeKat6mIb6Z7VlJ-10" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="700" y="388" as="sourcePoint" />
+            <mxPoint x="799" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MXUQjWeKat6mIb6Z7VlJ-12" edge="1" parent="1" source="MXUQjWeKat6mIb6Z7VlJ-6" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.008;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.022;exitY=0.407;exitDx=0;exitDy=0;exitPerimeter=0;" target="MXUQjWeKat6mIb6Z7VlJ-7" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="540" y="520" as="sourcePoint" />
+            <mxPoint x="590" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MXUQjWeKat6mIb6Z7VlJ-14" edge="1" parent="1" source="MXUQjWeKat6mIb6Z7VlJ-10" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="MXUQjWeKat6mIb6Z7VlJ-11" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="540" y="520" as="sourcePoint" />
+            <mxPoint x="590" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MXUQjWeKat6mIb6Z7VlJ-26" connectable="0" parent="MXUQjWeKat6mIb6Z7VlJ-14" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="PostComment" vertex="1">
+          <mxGeometry relative="1" x="-0.0183" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MXUQjWeKat6mIb6Z7VlJ-15" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="480" y="354" as="sourcePoint" />
+            <mxPoint x="580" y="354" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MXUQjWeKat6mIb6Z7VlJ-29" connectable="0" parent="MXUQjWeKat6mIb6Z7VlJ-15" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Post&lt;div&gt;Comments&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.02" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MXUQjWeKat6mIb6Z7VlJ-16" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="Videos&lt;div&gt;S3&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="60" x="1040" y="-10" as="geometry" />
+        </mxCell>
+        <mxCell id="MXUQjWeKat6mIb6Z7VlJ-17" parent="1" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" value="CDN&lt;br&gt;cache" vertex="1">
+          <mxGeometry height="80" width="120" x="382" y="-26" as="geometry" />
+        </mxCell>
+        <mxCell id="MXUQjWeKat6mIb6Z7VlJ-18" edge="1" parent="1" source="MXUQjWeKat6mIb6Z7VlJ-17" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.96;exitY=0.7;exitDx=0;exitDy=0;exitPerimeter=0;" target="MXUQjWeKat6mIb6Z7VlJ-16" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="540" y="360" as="sourcePoint" />
+            <mxPoint x="590" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MXUQjWeKat6mIb6Z7VlJ-19" edge="1" parent="1" source="MXUQjWeKat6mIb6Z7VlJ-5" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.492;entryY=0.938;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="MXUQjWeKat6mIb6Z7VlJ-17" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="540" y="360" as="sourcePoint" />
+            <mxPoint x="590" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MXUQjWeKat6mIb6Z7VlJ-22" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=-15;entryPerimeter=0;" target="MXUQjWeKat6mIb6Z7VlJ-16" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="890" y="240" as="sourcePoint" />
+            <mxPoint x="590" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MXUQjWeKat6mIb6Z7VlJ-28" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;span data-start=&quot;1739&quot; data-end=&quot;1764&quot;&gt;SSE for live comments&lt;/span&gt;&lt;br&gt;&lt;span data-start=&quot;1769&quot; data-end=&quot;1818&quot;&gt;Cursor-based GET for initial/history/recovery&lt;/span&gt;&lt;br&gt;&lt;span data-start=&quot;1823&quot; data-end=&quot;1860&quot;&gt;Reconnect → GET from cursor → SSE&lt;/span&gt;&lt;br&gt;&lt;span data-start=&quot;1865&quot; data-end=&quot;1904&quot;&gt;Client deduplicates using commentId&lt;/span&gt;" vertex="1">
+          <mxGeometry height="140" width="310" x="192" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="MXUQjWeKat6mIb6Z7VlJ-30" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.017;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" target="MXUQjWeKat6mIb6Z7VlJ-34" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="630" y="460" />
+            </Array>
+            <mxPoint x="480" y="383" as="sourcePoint" />
+            <mxPoint x="580.99" y="386" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MXUQjWeKat6mIb6Z7VlJ-31" connectable="0" parent="MXUQjWeKat6mIb6Z7VlJ-30" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="SSE" vertex="1">
+          <mxGeometry relative="1" x="-0.0906" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MXUQjWeKat6mIb6Z7VlJ-35" edge="1" parent="1" source="MXUQjWeKat6mIb6Z7VlJ-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="MXUQjWeKat6mIb6Z7VlJ-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MXUQjWeKat6mIb6Z7VlJ-32" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="NewComment&lt;div&gt;Redis Pub/Sub&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="190" x="880" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="MXUQjWeKat6mIb6Z7VlJ-34" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="CommentBrodcast&lt;div&gt;Service&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="790" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="MXUQjWeKat6mIb6Z7VlJ-36" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="CommentBrodcast&lt;div&gt;Service&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="794" y="524" as="geometry" />
+        </mxCell>
+        <mxCell id="MXUQjWeKat6mIb6Z7VlJ-37" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="CommentService" vertex="1">
+          <mxGeometry height="60" width="120" x="794" y="346" as="geometry" />
+        </mxCell>
+        <mxCell id="MXUQjWeKat6mIb6Z7VlJ-38" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;Redis channel per video:&lt;/div&gt;&lt;div&gt;This helps us with fetching all comments for same videos from same partition&lt;/div&gt;&lt;div&gt;This will also help us maintain ordering&lt;/div&gt;&lt;div&gt;&lt;strong data-start=&quot;683&quot; data-end=&quot;700&quot;&gt;Redis Pub/Sub&lt;/strong&gt;&lt;br&gt;Channel: &lt;code data-start=&quot;714&quot; data-end=&quot;734&quot;&gt;comments:{videoId}&lt;/code&gt;&lt;br&gt;BroadcastService dynamically subscribes to channels for videos with active SSE clients.&lt;br&gt;MongoDB remains the source of truth; Redis is used for low-latency live delivery.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="420" x="960" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="MXUQjWeKat6mIb6Z7VlJ-39" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Mongo :&lt;div&gt;we have changing doumnet structure rather than changing query pattern&lt;br&gt;easier to handle replies , reactions parent commentID.&lt;br&gt;Although cassandra can easily achieve the same&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="103" width="300" x="1100" y="327" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
