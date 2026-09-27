@@ -41,6 +41,10 @@ MongoDB            Redis Pub/Sub
        comment write
 ```
 
+
+![LiveComments HLD](LiveComments.png)
+
+
 ### Responsibilities
 
   -----------------------------------------------------------------------

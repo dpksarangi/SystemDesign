@@ -1,12 +1,8 @@
 # HLD & System Design Learning
 
-A personal knowledge base for **High-Level Design (HLD), System Design,
-distributed systems, and backend engineering concepts**.
+A personal knowledge base for **High-Level Design (HLD), System Design, distributed systems, and backend engineering concepts**.
 
-The goal of this repository is not to collect definitions. It is to
-build the ability to **reason about systems, make trade-offs, estimate
-scale, and defend architectural decisions in interviews and real-world
-engineering discussions.**
+The goal of this repository is not to collect definitions. It is to build the ability to **reason about systems, make trade-offs, estimate scale, and defend architectural decisions in interviews and real-world engineering discussions.**
 
 ------------------------------------------------------------------------
 
@@ -19,18 +15,26 @@ HLD/
 │   └── main/
 │       └── java/
 │           └── com/
-│               ├── hld/
-│               │   ├── adclickaggregator/
-│               │   │   ├── AdClickAggregator.drawio
-│               │   │   ├── AdClickAggregator.svg
-│               │   │   └── Ad_Click_Aggregator_Staff_System_Design_Notes.md
-│               │   │
-│               │   └── twiter/
-│               │       ├── Twiter.drawio
-│               │       ├── Twiter.png
-│               │       └── Tweeter_Staff_System_Design_Notes.md
-│               │
-│               └── concepts.nosqldbs/
+│               ├── concepts/
+│               │   ├── auth/
+│               │   ├── communication/
+│               │   ├── distributedSystems/
+│               │   │   └── transactions/
+│               │   └── nosqldbs/
+│               └── hld/
+│                   ├── adclickaggregator/
+│                   ├── bitly/
+│                   ├── crm/
+│                   ├── dropbox/
+│                   ├── IRCTC/
+│                   ├── livecomments/
+│                   ├── ratelimiter/
+│                   ├── ticketmaster/
+│                   ├── tinder/
+│                   ├── twiter/
+│                   ├── uber/
+│                   ├── whatsapp/
+│                   └── youtube/
 │
 ├── src/test/
 │
@@ -38,8 +42,7 @@ HLD/
 └── README.md
 ```
 
-> The repository currently uses a Java/Maven project structure, but the
-> notes themselves are primarily Markdown and architecture diagrams.
+> The repository currently uses a Java/Maven project structure, but the notes themselves are primarily Markdown and architecture diagrams.
 
 ------------------------------------------------------------------------
 
@@ -83,6 +86,16 @@ Examples:
 
 -   Twitter / Tweeter
 -   Ad Click Aggregator
+-   Bitly
+-   Dropbox
+-   IRCTC
+-   Live Comments
+-   Rate Limiter
+-   Ticketmaster
+-   Tinder
+-   Uber
+-   WhatsApp
+-   YouTube
 -   Future system-design problems
 
 Each design may contain:
@@ -99,6 +112,8 @@ Concept-focused notes live separately from system designs.
 
 Examples include:
 
+-   Authentication (e.g., OAuth2, JWT, SAML)
+-   Real-time communication
 -   CAP Theorem
 -   PACELC
 -   Consistency models
@@ -118,15 +133,14 @@ Examples include:
 -   Stream processing
 -   Batch processing
 -   Event-driven architecture
--   Distributed transactions
+-   Distributed transactions (e.g., Outbox, Saga)
 -   Idempotency
 -   Exactly-once / at-least-once / at-most-once processing
 -   Outbox pattern
 -   CQRS
 -   Event sourcing
 
-The purpose of these notes is to understand the **building blocks** that
-appear repeatedly inside system designs.
+The purpose of these notes is to understand the **building blocks** that appear repeatedly inside system designs.
 
 ------------------------------------------------------------------------
 
@@ -140,8 +154,7 @@ Instead of starting with:
 
 Start with:
 
-> "What does the system need to do, how much traffic does it handle,
-> what must be strongly consistent, and what can be asynchronous?"
+> "What does the system need to do, how much traffic does it handle, what must be strongly consistent, and what can be asynchronous?"
 
 Then choose technologies based on those requirements.
 
@@ -368,9 +381,7 @@ Avoid:
 
 Prefer:
 
-> "Kafka gives us durable, partitioned event processing, but adds
-> operational complexity. Given the throughput and replay requirement,
-> that complexity is justified."
+> "Kafka gives us durable, partitioned event processing, but adds operational complexity. Given the throughput and replay requirement, that complexity is justified."
 
 ------------------------------------------------------------------------
 
@@ -594,8 +605,7 @@ What failure modes should I consider?
 What interview questions can follow?
 ```
 
-If a concept cannot be connected to a real system-design decision, it
-probably needs more context.
+If a concept cannot be connected to a real system-design decision, it probably needs more context.
 
 ------------------------------------------------------------------------
 
@@ -635,6 +645,108 @@ Focus areas:
 -   Kafka
 -   consistency and failure handling
 
+## Bitly
+
+Focus areas:
+
+-   URL shortening
+-   high read/write throughput
+-   caching
+-   database sharding
+-   analytics
+-   scalability
+
+## Dropbox
+
+Focus areas:
+
+-   file storage
+-   metadata management
+-   synchronization
+-   conflict resolution
+-   scalability
+-   consistency
+
+## IRCTC
+
+Focus areas:
+
+-   ticket booking
+-   concurrency control
+-   database partitioning
+-   caching
+-   failure handling
+-   scalability
+
+## Live Comments
+
+Focus areas:
+
+-   real-time comment streaming
+-   WebSocket communication
+-   scalability
+-   latency
+-   failure handling
+
+## Rate Limiter
+
+Focus areas:
+
+-   request throttling
+-   token bucket algorithm
+-   distributed rate limiting
+-   scalability
+
+## Ticketmaster
+
+Focus areas:
+
+-   event ticketing
+-   concurrency control
+-   database partitioning
+-   caching
+-   scalability
+
+## Tinder
+
+Focus areas:
+
+-   matchmaking
+-   real-time updates
+-   scalability
+-   caching
+-   failure handling
+
+## Uber
+
+Focus areas:
+
+-   ride booking
+-   real-time updates
+-   scalability
+-   caching
+-   failure handling
+
+## WhatsApp
+
+Focus areas:
+
+-   messaging
+-   real-time updates
+-   scalability
+-   caching
+-   failure handling
+
+## YouTube
+
+Focus areas:
+
+-   video streaming
+-   metadata management
+-   scalability
+-   caching
+-   failure handling
+
 ------------------------------------------------------------------------
 
 # The Goal
@@ -645,9 +757,7 @@ The ultimate goal of this repository is to move from:
 
 to:
 
-> **"I understand the problem, I can estimate the scale, I can design
-> the system, I know where it will fail, and I can explain why I made
-> each trade-off."**
+> **"I understand the problem, I can estimate the scale, I can design the system, I know where it will fail, and I can explain why I made each trade-off."**
 
 And eventually:
 
@@ -695,8 +805,6 @@ Staff-level design
 
 Potential additions:
 
--   Rate Limiter
--   URL Shortener
 -   Notification System
 -   Distributed Job Scheduler
 -   File Storage / Dropbox
